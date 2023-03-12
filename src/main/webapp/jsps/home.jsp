@@ -9,8 +9,8 @@
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to Harman Private Limited. Bengaluru,Karnataka,India </h1>
-<h1 align="center"> Ellogroup</h1>
+<h1 align="center">Welcome to Harman Private Limited,Bengaluru,Karnataka,India </h1>
+<h1 align="center"> Ellogroup<br> Vue</h1>
 
 
 	
