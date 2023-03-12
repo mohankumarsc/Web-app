@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+    
+    tools {
+        maven "maven-3.9.0"
+    }
+    
+    stages {
+        stage("clone from github") {
+            steps {
+                git branch: "master", url: "https://github.com/mohankumarsc/Web-app.git"
+            }
+        }
+        
+        
+        stage("Unit Testing") {
+            steps {
+                
+                sh "mvn clean test"
+                
+                }
+        }  
+        
+        
+        
+        stage("Build code") {
+            steps {
+                
+                sh "mvn clean package"
+                
+            }
+        }  
+        
+        stage("Deploy") {
+            steps {
+                
+                sshagent(['Deployuser']) {
+                sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war  ec2-user@54.246.27.202:/opt/apache-tomcat-9.0.73/webapps"
+                }
+            }
+        }  
+        
+    }
+}
