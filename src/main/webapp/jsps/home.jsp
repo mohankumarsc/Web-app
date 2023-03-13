@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1 align="center">Welcome to Harman Private Limited,Bengaluru,Karnataka,India </h1>
-<h1 align="center"> Ellogroup<br> Gourmetsociety</h1>
+<h1 align="center"> Ellogroup<br> Gourmetsociety<br>Hi-life</h1>
 
 
 	
